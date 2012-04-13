@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>ComFet: Referência do Arquivo stack.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Gerado por Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&nbsp;de&nbsp;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referência do Arquivo stack.h</h1>
+<p>
+<a href="stack_8h-source.html">Vá para o código-fonte deste arquivo.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Estruturas de Dados</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><b>elem</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><b>_stack</b></td></tr>
+
+<tr><td colspan="2"><br><h2>Definições de Tipos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b9845db14cae907a69dcc06dedbcd6cb"></a><!-- doxytag: member="stack.h::stack" ref="b9845db14cae907a69dcc06dedbcd6cb" args="" -->
+typedef struct _stack *&nbsp;</td><td class="memItemRight" valign="bottom"><b>stack</b></td></tr>
+
+<tr><td colspan="2"><br><h2>Funções</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="stack_8h.html#f72990f9f20e980cc6d94738284027f1">init_stack</a> (stack *s)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inicializar a pilha. Uso tipico: init_stack(&amp;minha_pilha);.  <a href="#f72990f9f20e980cc6d94738284027f1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="stack_8h.html#878ce7471c9e3d23061d535fe20bd2a0">empty</a> (stack s)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Testar se a pilha esta vazia.  <a href="#878ce7471c9e3d23061d535fe20bd2a0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="stack_8h.html#4ad065dd9f21d91744286b747e40dcfb">push</a> (stack *s, void *item)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Empilhar um elemento na pilha. (O tipo do elemento eh void *.).  <a href="#4ad065dd9f21d91744286b747e40dcfb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="stack_8h.html#25caeafdf2844ec41857163557f6a316">pop</a> (stack *s)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Desempilhar o elemento no topo da pilha.  <a href="#25caeafdf2844ec41857163557f6a316"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="stack_8h.html#f38335753113fddd0703b709f412d2b5">top</a> (stack s)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Consultar o elemento no topo da pilha.  <a href="#f38335753113fddd0703b709f412d2b5"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Descrição Detalhada</h2>
+<hr><h2>Funções</h2>
+<a class="anchor" name="878ce7471c9e3d23061d535fe20bd2a0"></a><!-- doxytag: member="stack.h::empty" ref="878ce7471c9e3d23061d535fe20bd2a0" args="(stack s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int empty           </td>
+          <td>(</td>
+          <td class="paramtype">stack&nbsp;</td>
+          <td class="paramname"> <em>s</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Testar se a pilha esta vazia. 
+<p>
+Testa se a pilha está vazia. <dl compact><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>uma pilha </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Retorna:</b></dt><dd><ul>
+<li>0 se a pilha nao esta vazia,</li><li>um valor diferente de zero se a pilha esta vazia. </li></ul>
+</dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f72990f9f20e980cc6d94738284027f1"></a><!-- doxytag: member="stack.h::init_stack" ref="f72990f9f20e980cc6d94738284027f1" args="(stack *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_stack           </td>
+          <td>(</td>
+          <td class="paramtype">stack *&nbsp;</td>
+          <td class="paramname"> <em>s</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Inicializar a pilha. Uso tipico: init_stack(&amp;minha_pilha);. 
+<p>
+Inicializa a pilha, allocando qualquer espaço na memoria que seja necessario. <dl compact><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>um ponteiro sobre uma pilha (stack*). </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Retorna:</b></dt><dd>nada (void). </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="25caeafdf2844ec41857163557f6a316"></a><!-- doxytag: member="stack.h::pop" ref="25caeafdf2844ec41857163557f6a316" args="(stack *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* pop           </td>
+          <td>(</td>
+          <td class="paramtype">stack *&nbsp;</td>
+          <td class="paramname"> <em>s</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Desempilhar o elemento no topo da pilha. 
+<p>
+Desempilha o elemento no topo da pilha, e retorna-o. Remove este elemento da pilha. <dl compact><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s,um</em>&nbsp;</td><td>ponteiro sobre a pilha de onde se deve tirar um elemento. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Retorna:</b></dt><dd>o elemento que foi desempilhado, ou NULL se não tinha como desempilhar alguma coisa. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4ad065dd9f21d91744286b747e40dcfb"></a><!-- doxytag: member="stack.h::push" ref="4ad065dd9f21d91744286b747e40dcfb" args="(stack *s, void *item)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int push           </td>
+          <td>(</td>
+          <td class="paramtype">stack *&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>item</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Empilhar um elemento na pilha. (O tipo do elemento eh void *.). 
+<p>
+Empilha um elemento na pilha. <dl compact><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s,um</em>&nbsp;</td><td>ponteiro sobre a pilha onde se deve inserir o elemento. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>item,o</em>&nbsp;</td><td>elemento a ser inserido. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Retorna:</b></dt><dd>0 se a inserção deu certo. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f38335753113fddd0703b709f412d2b5"></a><!-- doxytag: member="stack.h::top" ref="f38335753113fddd0703b709f412d2b5" args="(stack s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* top           </td>
+          <td>(</td>
+          <td class="paramtype">stack&nbsp;</td>
+          <td class="paramname"> <em>s</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Consultar o elemento no topo da pilha. 
+<p>
+Retorna um ponteiro sobre o elemento no topo da pilha. Nao remove este elemento da pilha. <dl compact><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s,a</em>&nbsp;</td><td>pilha de que se deve consultar o topo. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Retorna:</b></dt><dd>o elemento, ou NULL se não tinha nada no topo. </dd></dl>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Gerado em Thu mar 7 17:29:11 2012 para ComFet por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>
