@@ -4,7 +4,7 @@
 all: comfet
 
 comfet: comfet.c
-	$(CC) $(CFLAGS) -o comfet $(OBJ_DIR)/* \
+	$(CC) $(CFLAGS) -o comfet $(OBJ_DIR)/stack.o \
 -I$(INC_DIR) comfet.c
 
 install: comfet.c comfet

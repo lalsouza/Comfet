@@ -13,7 +13,7 @@ stack.o: stack.c
 	$(CC) $(CFLAGS) -c stack.c
 
 install: $(OBJ1) $(HEAD1)
-	cp $(OBJ1) $(OBJ_DIR); \
+	cp $(OBJ1) $(OBJ_DIR);\
 cp $(HEAD1) $(INC_DIR)
 
 clean:

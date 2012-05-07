@@ -45,14 +45,14 @@ TDIR7    = $(TEST)/Etapa7
 
 all: etapa1 etapa2 etapa3
 
-allteste: teste1
+allteste: teste1 teste2
 
 # ===== ETAPA 1 =====
 
 etapa1: $(DIR1)/stack.h $(DIR1)/symbol_table.h $(DIR1)/stack.c $(DIR1)/symbol_table.c
 	cd $(DIR1) && $(MAKE) -w install
 
-teste1:
+teste1: etapa1
 	cd $(TDIR1) && $(MAKE) -w install
 
 # ===== ETAPA 2 =====
@@ -67,6 +67,10 @@ teste2: etapa2
 
 etapa3: $(DIR3)/comfet.c
 	cd $(DIR3) && $(MAKE) -w install
+    
+teste3: etapa3
+	cd $(TDIR3) && $(MAKE) -w install    
+
 
 # ========= CLEAN =========#
 
