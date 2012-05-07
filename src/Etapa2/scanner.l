@@ -26,30 +26,30 @@ DOUBLE {return (DOUBLE);}
 FLOAT {return (FLOAT);}
 CHAR {return (CHAR);}
 
-[\*] {return ('*');}
-[\+] {return ('+');}
-[\-] {return ('-');}
-[/] {return ('/');}
-[,] {return (',');}
-[;] {return (';');}
-['] {return (QUOTE);}
-["] {return (DQUOTE);}
-[\(] {return ('(');}
-[\)] {return (')');}
-[\[] {return ('[');}
-[\]] {return (']');}
-[\{] {return ('{');}
-[\}] {return ('}');}
-[<] {return ('<');}
-[>] {return ('>');}
-[=] {return ('=');}
-[<][=] {return (LE);}
-[>][=] {return (GE);}
-[=][=] {return (EQ);}
-[!] {return ('!');}
-[!][=] {return (NE);}
-[\&][\&] {return (AND);}
-[\|][\|] {return (OR);}
+"*" {return ('*');}
+"+" {return ('+');}
+"-" {return ('-');}
+"/" {return ('/');}
+"," {return (',');}
+";" {return (';');}
+"'" {return (QUOTE);}
+"\"" {return (DQUOTE);}
+"(" {return ('(');}
+")" {return (')');}
+"[" {return ('[');}
+"]" {return (']');}
+"{" {return ('{');}
+"}" {return ('}');}
+"<" {return ('<');}
+">" {return ('>');}
+"=" {return ('=');}
+"<=" {return (LE);}
+">=" {return (GE);}
+"==" {return (EQ);}
+"!" {return ('!');}
+"!=" {return (NE);}
+"&&" {return (AND);}
+"||" {return (OR);}
 IF {return (IF);}
 THEN {return (THEN);}
 ELSE {return (ELSE);}
@@ -68,3 +68,5 @@ WHILE {return (WHILE);}
 /* Secao dos  Procedimentos auxiliares  */
 
 /* Para redefinir a entrada padrao do LEX. */
+
+extern FILE *yyin;
