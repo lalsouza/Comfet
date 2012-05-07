@@ -77,4 +77,5 @@ echo Objects > $(OBJ_DIR)/README;\
 echo Binaries > $(BIN)/README;\
 cd $(DIR1) && $(MAKE) -w clean;\
 cd $(DIR2) && $(MAKE) -w clean;\
+cd $(DIR3) && $(MAKE) -w clean;\
 cd $(TEST) && $(MAKE) -w clean
