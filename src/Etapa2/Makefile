@@ -1,10 +1,14 @@
-install: comfet
-	cp comfet $(COMFET_DIR)/Tests ; cp comfet.c $(COMFET_DIR)/Tests ;\
-	cp tokens.h $(COMFET_DIR)/include
+# Etapa2
+# Todas as variaveis nao-declaradas aqui estao definidas em Comfet/Makefile
 
-comfet: scanner.l tokens.h
-	flex -o comfet.c scanner.l; \
-	gcc -o comfet comfet.c 
+all: pico.c
+
+pico.c: scanner.l tokens.h
+	lex -o pico.c scanner.l
+
+install: pico.c scanner.l tokens.h
+	cp pico.c $(INC_DIR);\
+cp tokens.h $(INC_DIR)
 
 clean:
-	/bin/rm -f comfet comfet.c
+	rm -f pico.o; rm -f pico.c
