@@ -39,9 +39,18 @@ Transicao* tabela[6][10];
 
 void TraduzirToken(int*);
 
-int main(void) {
+int main(int argc, char* argv[]) {
 
-    yyin = fopen("teste3-imput.txt", "r");
+    if (argc != 2) {
+        printf("Uso: %s <input_file>. Try again!\n", argv[0]);
+        exit(-1);
+    }
+    yyin = fopen(argv[1], "r");
+    if (!yyin) {
+        printf("Uso: %s <input_file>. Could not find %s. Try again!\n", 
+               argv[0], argv[1]);
+        exit(-1);
+    }
 
     int I;
     int K;
